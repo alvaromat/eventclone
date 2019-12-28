@@ -25,13 +25,24 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*.svg",
+                "input": "./node_modules/@mdi/angular-material/",
+                "output": "./assets/"
+              }
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/sass",
+                "./src"
+              ]
+            }
           },
           "configurations": {
             "production": {

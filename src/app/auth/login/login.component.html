@@ -1,0 +1,31 @@
+<div class="login">
+  <h1 class="mat-headline">Identifícate</h1>
+
+
+  <form [formGroup]="mailLoginForm" autocomplete="off" novalidate (ngSubmit)="loginMail()">
+    <div class="fields">
+      <mat-form-field appearance="outline" class="email-field">
+        <mat-error *ngIf="mailLoginForm.controls.email.invalid">Introduce un email válido</mat-error>
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" matInput formControlName="password">
+      </mat-form-field>
+    </div>
+
+    <div class="button-list">
+      <button mat-raised-button class="email" [disabled]="mailLoginForm.dirty && mailLoginForm.invalid">
+        <mat-icon class="icon">email</mat-icon>
+        Conectar con email
+      </button>
+      <button mat-raised-button class="google" (click)="loginGoogle()" type="button">
+        <mat-icon class="icon" svgIcon="google"></mat-icon>
+        Conectar con Google
+      </button>
+    </div>
+  </form>
+
+</div>
