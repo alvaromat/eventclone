@@ -1,12 +1,22 @@
 import {NgModule} from '@angular/core';
-import {MatButtonModule, MatFormFieldModule, MatIconModule, MatIconRegistry, MatInputModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatIconRegistry,
+  MatInputModule,
+  MatToolbarModule,
+  MatTooltipModule
+} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
 
 const materialModules = [
   MatButtonModule,
   MatIconModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatToolbarModule,
+  MatTooltipModule
 ];
 
 @NgModule({

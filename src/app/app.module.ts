@@ -8,7 +8,7 @@ import {AngularFireModule} from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import {AuthModule} from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
-import {MaterialModule} from './shared/material/material.module';
+import {CoreModule} from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import {MaterialModule} from './shared/material/material.module';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AuthModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

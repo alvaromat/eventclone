@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AppToolbarComponent } from './app-toolbar/app-toolbar.component';
+import {SharedModule} from '../shared/shared.module';
+import {AuthModule} from '../auth/auth.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [AppToolbarComponent],
   imports: [
-    CommonModule
+    SharedModule,
+    AuthModule
+  ],
+  exports: [
+    AppToolbarComponent
   ]
 })
 export class CoreModule { }
